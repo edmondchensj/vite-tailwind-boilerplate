@@ -19,7 +19,7 @@ export default function Page() {
 
   return (
     <>
-      <div>
+      <div className="flex flex-col items-center">
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
@@ -28,7 +28,7 @@ export default function Page() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
+      <div className="card flex flex-col items-center">
         <button onClick={handleClick}>count is {count}</button>
         <div>
           <p>Dogs to fetch:</p>
