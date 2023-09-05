@@ -9,6 +9,67 @@ import { CalendarFilled, CalendarOutlined, HeartOutlined } from "@ant-design/ico
 import { Calendar } from "antd";
 import { BeakerIcon, HeartIcon } from "@heroicons/react/24/outline"
 
+function Button({
+  children,
+  onClick=() => {},
+  disabled=false,
+  type="filled",
+  size="medium",
+  theme="purple"
+}: any) {
+  
+  const sizeClass = (size) => {
+    switch(size) {
+      case "large":
+        return `
+          leading-6 
+          py-2.5 px-4
+          text-base
+        `;
+      case "medium": 
+        return `
+          leading-4
+          py-1.5 px-4
+          text-sm
+        `
+    }
+  }
+
+  const themeClass = (theme) => {
+    switch(theme) {
+      case "purple":
+        return `
+          border-2 
+          border-purple-300
+          bg-transparent
+        `;
+
+      case "white": 
+        return `
+          border-2
+          border-gray-200
+          bg-transparent
+        `
+    }
+  }
+  return (
+    <button 
+      onClick={onClick}
+      className={`
+        cursor-pointer
+        flex
+        items-center
+        gap-4
+        font-semibold
+        rounded-2xl
+        ${sizeClass(size)}
+        ${themeClass(theme)}
+      `}>
+      {children}
+    </button>
+  )
+}
+
 function Card({
   title,
   message
@@ -26,7 +87,6 @@ function Card({
 }
 
 export default function Page() {
-  
 
   return (
     <>
@@ -113,6 +173,12 @@ export default function Page() {
               title={"New Card 3"} 
               message={"This is the refactored card that can be read more easily"} />
             
+          </div>
+          <div className="mt-2 font-medium">
+            Buttons can be refactored as well
+          </div>
+          <div>
+            <Button children={"Hello"}/>
           </div>
          
         </div>
