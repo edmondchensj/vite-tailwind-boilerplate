@@ -9,6 +9,74 @@ import { CalendarFilled, CalendarOutlined, HeartOutlined } from "@ant-design/ico
 import { Calendar } from "antd";
 import { BeakerIcon, HeartIcon } from "@heroicons/react/24/outline"
 
+/*
+ Styled Component version
+ export const Button = styled.button<ButtonProps>`
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 60px;
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-style: normal;
+    font-weight: 700;
+  }
+  ${({ size }) => {
+    switch (size) {
+      case "large":
+        return `
+          line-height: 24px;  
+          padding: 10px 16px;     
+          font-size: 16px;
+      `;
+      case "medium":
+        return `
+          line-height: 16px;  
+          padding: 6px 16px;     
+          font-size: 14px;
+        `;
+      case "small":
+        return `
+          height: 20px;          
+        `;
+      default:
+        return `
+        height: 28px;          
+        `;
+    }
+  }}
+
+  ${({ type, theme }) => {
+    if (type === "outlined" && theme === "purple") {
+      return `
+        border: 2px solid var(--purple-light-7-a-35-b-0);
+        background: transparent; 
+        color: var(--purple-light-7-a-35-b-0);     
+        `;
+    }
+    if (type === "outlined" && theme === "white") {
+      return `
+        border: 2px solid var(--grey-white-fff);
+        background: transparent; 
+        color: var(--grey-white-fff);     
+        `;
+    }
+    if (type === "outlined" && theme === "grey") {
+      return `
+        border: 2px solid var(--grey-mid-ababab);
+        background: transparent; 
+        color: var(--grey-mid-ababab);     
+        `;
+    }
+  }}
+`;
+*/
+
 function Button({
   children,
   onClick=() => {},
